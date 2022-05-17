@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulb On off project</title>
+    <style>
+      body {
+        text-align: center;
+        margin: 80px 30px;
+      }
+      button {
+        padding: 10px;
+        width: 10%;
+        background-image: linear-gradient(135deg, #81fbb8 10%, #28c76f 100%);
+        border-radius: 2px;
+        border: 1px solid black;
+        transition: 800ms ease;
+        font-size: 15px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      }
+      button:hover {
+        background-image: linear-gradient(35deg, #81fbb8 50%, #28c76f 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <img id="Bulb" src="/bulb-off.png" />
+    <br />
+    <br />
+    <button id="bulbswitch">Turn on</button>
+  </body>
+
+  <script>
+    const bulb = document.querySelector("#Blub");
+
+    let bulbswitch = document.querySelector("#bulbswitch");
+
+    bulbswitch.addEventListener("click", function () {
+      console.log(Bulb.src);
+      if (Bulb.src.match("off")) {
+        Bulb.src = "./bulb-on.png";
+
+        bulbswitch.innerHTML = "Turn-off";
+      } else {
+        Bulb.src = "./bulb-off.png";
+        bulbswitch.innerHTML = "Turn-on";
+      }
+    });
+  </script>
+</html>
